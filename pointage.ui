@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1111</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>POINTAGE</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/Ressource/Images/ASRH_logo.png</normaloff>:/Ressource/Images/ASRH_logo.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QStackedWidget" name="StackedWidgetHistorique">
+     <property name="styleSheet">
+      <string notr="true">QWidget#PaginationPage1{
+border-radius:4px;
+background-color: rgb(255, 255, 255);
+}
+QHeaderView,QHeaderView::section {
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.522, y2:1, stop:0 rgba(96, 166, 252, 255), stop:1 rgba(105, 131, 243, 255));
+	height:30px;
+    color: &quot;#eee&quot;;
+	font-weight:bold;
+    font-size: 15px;
+    padding: 4px;
+	border:none;
+}
+
+QTreeWidget#TableauPointageE,QTreeWidget#TableauPointageO{
+border:none;
+}
+
+
+QTreeWidget#TableauHistorique:item{
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.522, y2:1, stop:0 rgba(96, 166, 252, 0.2), stop:1 rgba(105, 131, 243, 0.2));
+}
+QTreeWidget#TableauHistorique:item:hover{
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.522, y2:1, stop:0 rgba(96, 166, 252, 0.3), stop:1 rgba(105, 131, 243, 0.3));
+}
+QTreeWidget#TableauHistorique:item:selected{
+	background-color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.522, y2:1, stop:0 rgba(96, 166, 252, 0.6), stop:1 rgba(105, 131, 243, 0.6));
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="StackedWidgetHistoriquePage1">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTreeWidget" name="TableauPointageE">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <column>
+          <property name="text">
+           <string>Matricule</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Nom</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Prénom(s)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Poste</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Temps d'activité(En jour)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Période</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page">
+      <property name="styleSheet">
+       <string notr="true">QWidget#TableauPointageO{
+	border:none;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTreeWidget" name="TableauPointageO">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <column>
+          <property name="text">
+           <string>Matricule</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Nom</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Prénom(s)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Poste</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Temps d'activité(En heure)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Période</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="Footer">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton{
+	color:#fff;
+	border-radius:7px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(96, 166, 252, 255), stop:1 rgba(105, 131, 243, 255));
+
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(104, 176, 255, 255), stop:1 rgba(115, 141, 253, 255));
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="ImprimerBtn">
+        <property name="minimumSize">
+         <size>
+          <width>141</width>
+          <height>33</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Imprimer</string>
+        </property>
+        <property name="icon">
+         <iconset resource="img.qrc">
+          <normaloff>:/BlancIcone/Images/BlancIcon/printer.svg</normaloff>:/BlancIcone/Images/BlancIcon/printer.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections/>
+</ui>

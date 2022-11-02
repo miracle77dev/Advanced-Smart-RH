@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>220</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>530</width>
+    <height>220</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>530</width>
+    <height>220</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Pop-Up</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/Ressource/Images/ASRH_logo.png</normaloff>:/Ressource/Images/ASRH_logo.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="NotifsBoxPanel">
+     <property name="styleSheet">
+      <string notr="true">QStackedWidget{
+background-color: rgb(255, 0, 0);
+	border-radius:15px;
+}
+
+
+QPushButton{
+	color:#fff;
+	border-radius:7px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(96, 166, 252, 255), stop:1 rgba(105, 131, 243, 255));
+
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(104, 176, 255, 255), stop:1 rgba(115, 141, 253, 255));
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="Info">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="styleSheet">
+          <string notr="true">QFrame#frame{
+	border-radius:15px;
+	background-color: rgb(240, 242, 245); 
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>50</y>
+            <width>531</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Roboto Light</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: qlineargradient(spread:pad, x1:0.489, y1:0, x2:0.522, y2:1, stop:0 rgba(96, 166, 252, 255), stop:1 rgba(105, 131, 243, 255));</string>
+          </property>
+          <property name="text">
+           <string>Notification !</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelIcon">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>531</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial Unicode MS</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/Autre/Images/AutreIcon/alert-circle.svg);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QTextBrowser" name="textBrowserInfo">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>100</y>
+            <width>521</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS UI Gothic</family>
+            <pointsize>30</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(31, 31, 31);
+border:none;
+background-color: rgb(240, 242, 245);</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS UI Gothic'; font-size:30pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; color:#222222;&quot;&gt;Votre boîte de réception est vide pour le moment&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="ComprisBtn">
+          <property name="geometry">
+           <rect>
+            <x>178</x>
+            <y>160</y>
+            <width>181</width>
+            <height>36</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>C'est compris</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Succes">
+      <property name="styleSheet">
+       <string notr="true">QWidget#Succes{
+background-color: rgb(240, 242, 245);
+}</string>
+      </property>
+      <widget class="QPushButton" name="AppliquerBtn">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>150</y>
+         <width>181</width>
+         <height>33</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Appliquer</string>
+       </property>
+       <property name="icon">
+        <iconset resource="img.qrc">
+         <normaloff>:/BlancIcone/Images/BlancIcon/check-circle.svg</normaloff>:/BlancIcone/Images/BlancIcon/check-circle.svg</iconset>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>70</y>
+         <width>411</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame#frame_2{
+	border:1px solid;
+	border-color: rgba(103, 139, 245,0.2);
+	border-radius:6px;
+}
+
+QDateEdit
+{
+padding:6px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(96, 166, 252, 0.1), stop:1 rgba(105, 131, 243, 0.1));
+border-radius:6px;
+color: rgb(103, 139, 245);
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>Roboto Light</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>De</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEdit">
+          <property name="minimumSize">
+           <size>
+            <width>170</width>
+            <height>33</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>Roboto Light</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>A</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEdit_2">
+          <property name="minimumSize">
+           <size>
+            <width>170</width>
+            <height>33</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="frameBlanc">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>531</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QComboBox" name="ChoseTypeBox">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>20</y>
+          <width>411</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox{
+border:none;
+padding:6px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(96, 166, 252, 0.1), stop:1 rgba(105, 131, 243, 0.1));
+border-radius:6px;
+color: rgb(103, 139, 245);;}
+</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Employés</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ouvriers</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <zorder>frameBlanc</zorder>
+      <zorder>AppliquerBtn</zorder>
+      <zorder>frame_2</zorder>
+     </widget>
+     <widget class="QWidget" name="CreateNew">
+      <property name="styleSheet">
+       <string notr="true">QWidget#CreateNew{
+background-color: rgb(239, 239, 239);
+}
+QLabel#ImgFrame,QFrame#frameInfo{
+background-color: rgb(255, 255, 255);
+border:1px solid;
+border-radius:4px;
+border-color:#fff;
+}</string>
+      </property>
+      <widget class="QLabel" name="ImgFrame">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>221</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frameInfo">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>9</y>
+         <width>281</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+border:1px solid;
+border-top:none;
+border-left:none;
+border-right:none;
+border-color: rgb(239, 239, 239);
+
+}
+
+QComboBox{
+border:1px solid;
+border-top:none;
+border-left:none;
+border-right:none;
+border-color: rgb(239, 239, 239);
+
+}
+QComboBox:pressed,
+QComboBox:focus,
+QComboBox:on{border-color: rgb(239, 239, 239);}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="StartCamBtn">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>160</y>
+          <width>31</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="img.qrc">
+          <normaloff>:/BlancIcone/Images/BlancIcon/camera.svg</normaloff>:/BlancIcone/Images/BlancIcon/camera.svg</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="AddEmployerBtn">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>160</y>
+          <width>31</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="img.qrc">
+          <normaloff>:/BlancIcone/Images/BlancIcon/user-plus.svg</normaloff>:/BlancIcone/Images/BlancIcon/user-plus.svg</iconset>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditMatricule">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Matricule</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditNom">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>Nom</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditPrenom">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>241</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Prénoms</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxPost">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>261</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(100, 100, 100);</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>_Poste_</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Session Bureau</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Session Chauffeur</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Session Dépôt</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Session Entretien</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Session Gardien</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Session Mecanique</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="comboBoxType">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>261</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(100, 100, 100);</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>_Type_</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>E</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>O</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="msg">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>169</y>
+          <width>161</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 145, 0);</string>
+        </property>
+        <property name="text">
+         <string>Bienvenue !</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Danger"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ComprisBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>266</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
